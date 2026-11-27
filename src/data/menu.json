@@ -1,0 +1,418 @@
+{
+  "_notes": "Prices in INR (₹). Items with 'todo' field indicate values or dietary flags read from menu photos that owners should confirm.",
+  "categories": [
+    {
+      "id": "ramen",
+      "label": "Ramen",
+      "jpLabel": "ラーメン",
+      "subtitle": "Slow-simmered broths, springy noodles, and tare steeped in patience.",
+      "items": [
+        {
+          "id": "miso-ramen",
+          "name": "Miso Ramen",
+          "jpName": "味噌ラーメン",
+          "description": "Umami-rich fermented miso broth crowned with charred scallions, ajitama egg, and sweet corn.",
+          "dietary": "non-veg",
+          "variants": [
+            { "label": "M", "price": 365 },
+            { "label": "L", "price": 699 }
+          ],
+          "secondaryVariants": {
+            "label": "Veg",
+            "variants": [
+              { "label": "M", "price": 339 },
+              { "label": "L", "price": 645 }
+            ]
+          },
+          "image": "/assets/dishes/miso-ramen.webp",
+          "todo": "Confirm Veg vs Non-Veg topping breakdown (M 339 / L 645 vs M 365 / L 699)."
+        },
+        {
+          "id": "shio-ramen",
+          "name": "Shio Ramen",
+          "jpName": "塩ラーメン",
+          "description": "Delicate, crystal-clear sea-salt dashi broth with tender chashu, menma bamboo, and toasted nori.",
+          "dietary": "non-veg",
+          "variants": [
+            { "label": "M", "price": 365 },
+            { "label": "L", "price": 699 }
+          ],
+          "secondaryVariants": {
+            "label": "Veg",
+            "variants": [
+              { "label": "M", "price": 339 },
+              { "label": "L", "price": 645 }
+            ]
+          },
+          "image": "/assets/dishes/shio-ramen.webp",
+          "todo": "Confirm Veg vs Non-Veg pricing pattern (M 339 / L 645 vs M 365 / L 699)."
+        },
+        {
+          "id": "tantanmen-ramen",
+          "name": "Tantanmen Ramen",
+          "jpName": "担々麺",
+          "description": "Velvety roasted sesame and rayu chili broth layered with spiced minced meat, bok choy, and soft egg.",
+          "dietary": "non-veg",
+          "price": 429,
+          "image": "/assets/dishes/tantanmen.webp"
+        },
+        {
+          "id": "abura-ramen",
+          "name": "Abura Ramen",
+          "jpName": "油そば",
+          "description": "Brothless Tokyo-style noodles tossed in aromatic tare, scallions, and slow-infused garlic oil.",
+          "dietary": "veg",
+          "price": 285,
+          "image": "/assets/dishes/miso-ramen.webp",
+          "todo": "Confirm whether Abura Ramen base is veg or non-veg and replace preview photo."
+        }
+      ]
+    },
+    {
+      "id": "udon",
+      "label": "Udon",
+      "jpLabel": "うどん",
+      "subtitle": "Thick, pillowy wheat noodles in comforting dashi or wok-seared glaze.",
+      "items": [
+        {
+          "id": "curry-udon",
+          "name": "Curry Udon",
+          "jpName": "カレーうどん",
+          "description": "Plump udon noodles bathed in deeply spiced, velvety Japanese dashi curry.",
+          "dietary": "non-veg",
+          "price": 375,
+          "image": "/assets/dishes/curry-udon.webp",
+          "todo": "Confirm protein option (chicken/veg) and add real dish photo."
+        },
+        {
+          "id": "yaki-udon",
+          "name": "Yaki Udon",
+          "jpName": "焼きうどん",
+          "description": "Wok-seared thick udon noodles glazed in savory soy-mirin tare with crisp seasonal vegetables.",
+          "dietary": "both",
+          "variants": [
+            { "label": "Non-Veg", "price": 275 },
+            { "label": "Veg", "price": 249 }
+          ],
+          "image": "/assets/dishes/curry-udon.webp",
+          "todo": "Confirm Non-Veg (275) vs Veg (249) label and add real dish photo."
+        }
+      ]
+    },
+    {
+      "id": "rice",
+      "label": "Rice",
+      "jpLabel": "ご飯もの",
+      "subtitle": "Steamed Japanese short-grain rice topped with crisp golden katsu.",
+      "items": [
+        {
+          "id": "chicken-katsu-rice",
+          "name": "Chicken Katsu Rice",
+          "jpName": "チキンカツ丼",
+          "description": "Crunchy panko-crusted chicken cutlet over warm rice with sweet-savory tonkatsu drizzle and shredded cabbage.",
+          "dietary": "non-veg",
+          "price": 257,
+          "image": "/assets/dishes/chicken-katsu-rice.webp",
+          "todo": "Price (~257) partly unreadable on menu photo — confirm exact amount."
+        },
+        {
+          "id": "tofu-katsu-rice",
+          "name": "Tofu Katsu Rice",
+          "jpName": "豆腐カツ丼",
+          "description": "Golden panko-fried silken tofu cutlet served over steamed rice with house glaze and pickled ginger.",
+          "dietary": "veg",
+          "price": 249,
+          "image": "/assets/dishes/chicken-katsu-rice.webp",
+          "todo": "Replace preview photo with Tofu Katsu Rice dish photo."
+        }
+      ]
+    },
+    {
+      "id": "bento",
+      "label": "Bento",
+      "jpLabel": "弁当",
+      "subtitle": "Balanced lacquer-style meal boxes crafted for lingering counter lunches and dinners.",
+      "items": [
+        {
+          "id": "teriyaki-tofu-bento",
+          "name": "Teriyaki Tofu Bento",
+          "jpName": "照り焼き豆腐弁当",
+          "description": "Glazed pan-seared tofu paired with seasoned rice, crisp greens, and traditional Japanese sides.",
+          "dietary": "veg",
+          "price": 491,
+          "image": "/assets/dishes/bento-box.webp"
+        },
+        {
+          "id": "tsukune-bento",
+          "name": "Tsukune Bento",
+          "jpName": "つくね弁当",
+          "description": "Charcoal-kissed Japanese chicken meatballs brushed in tare glaze alongside rice and pickles.",
+          "dietary": "non-veg",
+          "price": 519,
+          "image": "/assets/dishes/bento-box.webp"
+        },
+        {
+          "id": "ebi-tempura-bento",
+          "name": "Ebi Tempura Bento",
+          "jpName": "海老天ぷら弁当",
+          "description": "Feather-light battered prawn tempura served with dipping tentsuyu, rice, and seasonal sides.",
+          "dietary": "non-veg",
+          "price": 519,
+          "image": "/assets/dishes/bento-box.webp"
+        }
+      ]
+    },
+    {
+      "id": "sushi",
+      "label": "Sushi",
+      "jpLabel": "寿司",
+      "subtitle": "Delicately seasoned sushi rice rolled tightly in crisp roasted nori.",
+      "items": [
+        {
+          "id": "tamago-maki-sushi",
+          "name": "Tamago Maki Sushi",
+          "jpName": "玉子巻き",
+          "description": "Sweet rolled Japanese omelette nestled in vinegared rice and toasted nori.",
+          "dietary": "non-veg",
+          "variants": [
+            { "label": "4 pcs", "price": 295 },
+            { "label": "Large", "price": 555 }
+          ],
+          "image": "/assets/dishes/maki-sushi.webp",
+          "todo": "Confirm piece count for large portion and whether to mark as egg-veg or non-veg."
+        },
+        {
+          "id": "shiitake-mushroom-maki",
+          "name": "Shiitake Mushroom Maki Sushi",
+          "jpName": "椎茸巻き",
+          "description": "Slow-simmered umami shiitake mushrooms wrapped with sushi rice and crisp seaweed.",
+          "dietary": "veg",
+          "variants": [
+            { "label": "4 pcs", "price": 339 },
+            { "label": "Large", "price": 639 }
+          ],
+          "image": "/assets/dishes/maki-sushi.webp",
+          "todo": "Confirm piece count for large portion and add dish photo."
+        }
+      ]
+    },
+    {
+      "id": "starters",
+      "label": "Starters",
+      "jpLabel": "おつまみ",
+      "subtitle": "Izakaya small plates made to share before the bowls arrive.",
+      "items": [
+        {
+          "id": "chicken-karaage",
+          "name": "Chicken Karaage",
+          "jpName": "鶏の唐揚げ",
+          "description": "Double-fried ginger-garlic marinated chicken bites, crisp outside and juicy within.",
+          "dietary": "non-veg",
+          "variants": [
+            { "label": "Regular", "price": 185 },
+            { "label": "Large", "price": 365 }
+          ],
+          "image": "/assets/dishes/chicken-katsu-rice.webp"
+        },
+        {
+          "id": "teriyaki-chicken-wings",
+          "name": "Teriyaki Chicken Wings",
+          "jpName": "照り焼き手羽先",
+          "description": "Sticky caramelized soy-mirin wings finished with toasted white sesame.",
+          "dietary": "non-veg",
+          "price": 249,
+          "image": "/assets/dishes/chicken-katsu-rice.webp"
+        },
+        {
+          "id": "chicken-katsu",
+          "name": "Chicken Katsu",
+          "jpName": "チキンカツ",
+          "description": "Golden panko-breaded chicken cutlet sliced to order with tangy katsu sauce.",
+          "dietary": "non-veg",
+          "price": 222,
+          "image": "/assets/dishes/chicken-katsu-rice.webp"
+        },
+        {
+          "id": "tempura-onigiri",
+          "name": "Tempura Onigiri",
+          "jpName": "天むすおにぎり",
+          "description": "Warm hand-pressed sushi rice triangles tucked with crispy prawn tempura and toasted nori.",
+          "dietary": "non-veg",
+          "price": 349,
+          "image": "/assets/dishes/tempura-onigiri.webp",
+          "todo": "Price (~349) partly unreadable on menu photo — confirm exact amount and add dish photo."
+        },
+        {
+          "id": "cream-mushroom-korokke",
+          "name": "Cream Mushroom Korokke",
+          "jpName": "クリームコロッケ",
+          "description": "Crisp golden Japanese croquettes filled with velvety roasted mushroom béchamel.",
+          "dietary": "veg",
+          "price": 266,
+          "image": "/assets/dishes/tempura-onigiri.webp"
+        },
+        {
+          "id": "yaki-onigiri",
+          "name": "Yaki Onigiri",
+          "jpName": "焼きおにぎり",
+          "description": "Char-grilled rice ball brushed with smoky soy tare until delicately blistered.",
+          "dietary": "veg",
+          "price": 159,
+          "image": "/assets/dishes/tempura-onigiri.webp"
+        },
+        {
+          "id": "teriyaki-shiitake",
+          "name": "Teriyaki Shiitake Mushrooms",
+          "jpName": "椎茸の照り焼き",
+          "description": "Meaty shiitake caps seared and lacquered in sweet soy-ginger glaze.",
+          "dietary": "veg",
+          "price": 249,
+          "image": "/assets/dishes/tempura-onigiri.webp"
+        }
+      ]
+    },
+    {
+      "id": "salad",
+      "label": "Salad",
+      "jpLabel": "サラダ",
+      "subtitle": "Bright, crisp palate cleansers dressed in sesame and citrus.",
+      "items": [
+        {
+          "id": "wakame-salad",
+          "name": "Wakame Salad",
+          "jpName": "わかめサラダ",
+          "description": "Chilled tender sea greens tossed in toasted sesame oil, rice vinegar, and sesame seeds.",
+          "dietary": "veg",
+          "price": 159,
+          "image": "/assets/dishes/shio-ramen.webp"
+        }
+      ]
+    },
+    {
+      "id": "dessert",
+      "label": "Dessert",
+      "jpLabel": "甘味",
+      "subtitle": "A quiet, sweet note to close the evening.",
+      "items": [
+        {
+          "id": "hosshi-miso-vanilla",
+          "name": "Hosshi Miso Vanilla",
+          "jpName": "味噌バニラ",
+          "description": "Silky vanilla cream kissed with subtle white miso caramel for a lingering sweet-savory finish.",
+          "dietary": "veg",
+          "price": null,
+          "priceLabel": "Price TBD",
+          "image": "/assets/dishes/bento-box.webp",
+          "todo": "Price unreadable on menu photo — insert exact price before launch."
+        },
+        {
+          "id": "classic-tiramisu",
+          "name": "Classic Tiramisu",
+          "jpName": "ティラミス",
+          "description": "Espresso-soaked sponge layered with whipped mascarpone and dark cocoa dusting.",
+          "dietary": "veg",
+          "price": 249,
+          "image": "/assets/dishes/bento-box.webp"
+        }
+      ]
+    },
+    {
+      "id": "add-ons",
+      "label": "Add-ons",
+      "jpLabel": "トッピング",
+      "subtitle": "Customize your bowl at the counter.",
+      "items": [
+        {
+          "id": "chilli-garlic-sauce",
+          "name": "Chilli Garlic Sauce",
+          "jpName": "特製辛味油",
+          "description": "House-crafted fiery chili and roasted garlic oil.",
+          "dietary": "veg",
+          "price": 33
+        },
+        {
+          "id": "ajitama",
+          "name": "Ajitama",
+          "jpName": "味玉",
+          "description": "Six-minute soft-boiled egg marinated overnight in soy-mirin tare.",
+          "dietary": "non-veg",
+          "price": 45,
+          "todo": "Confirm egg marker convention (veg/eggetarian vs non-veg)."
+        },
+        {
+          "id": "nori-2-pcs",
+          "name": "Nori (2 pcs)",
+          "jpName": "海苔",
+          "description": "Crisp roasted sheets of mineral-rich Japanese seaweed.",
+          "dietary": "veg",
+          "price": 25
+        },
+        {
+          "id": "kimchi",
+          "name": "Kimchi",
+          "jpName": "キムチ",
+          "description": "Tangy, fermented spicy napa cabbage with bright chili warmth.",
+          "dietary": "veg",
+          "price": 69,
+          "todo": "Confirm if house kimchi uses fish sauce (non-veg) or is 100% veg."
+        }
+      ]
+    }
+  ],
+  "signatureBowls": [
+    {
+      "index": "01",
+      "name": "Miso Ramen",
+      "jpName": "味噌ラーメン",
+      "description": "Umami-rich fermented miso broth, charred scallions, ajitama egg, and sweet corn.",
+      "price": "₹365 / ₹699",
+      "image": "/assets/dishes/miso-ramen.webp",
+      "tag": "House Favorite"
+    },
+    {
+      "index": "02",
+      "name": "Shio Ramen",
+      "jpName": "塩ラーメン",
+      "description": "Crystal-clear sea-salt dashi broth with seared chashu, menma, and crisp nori.",
+      "price": "₹365 / ₹699",
+      "image": "/assets/dishes/shio-ramen.webp",
+      "tag": "Delicate Broth"
+    },
+    {
+      "index": "03",
+      "name": "Tantanmen",
+      "jpName": "担々麺",
+      "description": "Creamy toasted sesame & chili tare broth, spiced mince, and bok choy.",
+      "price": "₹429",
+      "image": "/assets/dishes/tantanmen.webp",
+      "tag": "Warm Heat"
+    },
+    {
+      "index": "04",
+      "name": "Curry Udon",
+      "jpName": "カレーうどん",
+      "description": "Plump wheat udon bathed in velvety aromatic Japanese dashi curry.",
+      "price": "₹375",
+      "image": "/assets/dishes/curry-udon.webp",
+      "tag": "Comfort Bowl"
+    },
+    {
+      "index": "05",
+      "name": "Chicken Katsu Rice",
+      "jpName": "チキンカツ丼",
+      "description": "Crisp panko chicken cutlet over steamed Japanese rice with house tonkatsu glaze.",
+      "price": "₹257*",
+      "image": "/assets/dishes/chicken-katsu-rice.webp",
+      "tag": "Golden Crisp"
+    },
+    {
+      "index": "06",
+      "name": "Tempura Onigiri",
+      "jpName": "天むすおにぎり",
+      "description": "Hand-pressed warm rice triangles crowned with crispy prawn tempura and nori.",
+      "price": "₹349*",
+      "image": "/assets/dishes/tempura-onigiri.webp",
+      "tag": "Counter Bite"
+    }
+  ]
+}

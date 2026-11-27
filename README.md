@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hosshi Ramen — Website (Kalyani, West Bengal)
 
-## Getting Started
+Pitch demo & modern Japanese editorial website for **Hosshi Ramen** (`B-14/256, Block B, Kalyani, West Bengal 741235`). Built with Next.js App Router, TypeScript, Tailwind CSS, GSAP + ScrollTrigger, and Lenis smooth scrolling, configured for static export (`output: "export"`).
 
-First, run the development server:
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To build the static export (`out/`):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## How to Customize Content
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Contact, Hours & Google Maps (`src/config/site.ts`)
+Open `src/config/site.ts` and replace the marked `// TODO:` placeholders:
+- `contact.phoneDisplay` & `contact.phoneHref` (`tel:+91...`)
+- `contact.whatsappNumber` (digits only with country code, e.g. `9198XXXXXXXX`)
+- `hours` array (opening days and timings)
+- `maps.embedUrl` (paste the exact `src` URL from Google Maps → *Share* → *Embed a map*)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Menu Items, Prices & Dietary Flags (`src/data/menu.json`)
+Edit `src/data/menu.json`:
+- Categories live under `categories[]` (`ramen`, `udon`, `rice`, `bento`, `sushi`, `starters`, `salad`, `dessert`, `add-ons`).
+- Each dish supports `price` or `variants` (e.g. `M` / `L`, `4 pcs` / `Large`, `Regular` / `Large`), `secondaryVariants` (for Veg/Non-Veg ramen splits), `dietary` (`"veg"`, `"non-veg"`, or `"both"`), and an optional `image` path for the desktop hover preview.
+- Look for `"todo"` notes inside `src/data/menu.json` for prices or dietary classifications that were partially unreadable on the reference menu photos (such as Chicken Katsu Rice, Tempura Onigiri, Hosshi Miso Vanilla, and Veg/Non-Veg ramen variants).
+- `signatureBowls[]` controls the 6 featured dishes in the horizontal Signature Bowls showcase.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. Photos & Brand Seal (`public/assets/`)
+All images are stored locally under `public/assets/` in optimized WebP/PNG format:
+- `public/assets/cat-seal.webp` & `src/app/icon.png` — Lucky cat seal emblem & favicon.
+- `public/assets/interior-counter.webp`, `wall-decor.webp`, `lantern-glow.webp`, `shelf-maneki.webp` — Restaurant interior photography.
+- `public/assets/dishes/` — Dish images (`miso-ramen.webp`, `shio-ramen.webp`, `tantanmen.webp`, `chicken-katsu-rice.webp`, plus editorial placeholders `curry-udon.webp`, `tempura-onigiri.webp`, `bento-box.webp`, `maki-sushi.webp` ready to swap with real restaurant dish photos).

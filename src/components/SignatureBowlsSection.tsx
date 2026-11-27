@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import menuData from "@/data/menu.json";
 import { SakuraPetals, SteamWisps } from "./JapaneseDecor";
+import { getAssetPath } from "@/config/site";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +98,7 @@ export function SignatureBowlsSection() {
               >
                 <div className="relative w-full h-full overflow-hidden rounded-[1px]">
                   <Image
-                    src={dish.image}
+                    src={getAssetPath(dish.image)}
                     alt={`${dish.name} — ${dish.description}`}
                     fill
                     sizes="500px"
@@ -184,7 +185,7 @@ export function SignatureBowlsSection() {
               <div className="relative aspect-[4/3] w-full overflow-hidden border border-[#C9A24B]/45 bg-[#1A1613] rounded-[2px] p-1">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src={dish.image}
+                    src={getAssetPath(dish.image)}
                     alt={`${dish.name} — ${dish.description}`}
                     fill
                     sizes="340px"

@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { EnsoCircle, HankoSeal, SumiBrushDivider } from "./JapaneseDecor";
+import { getAssetPath } from "@/config/site";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,7 +154,7 @@ export function StorySection() {
               >
                 <div className="relative w-full h-full overflow-hidden rounded-[1px]">
                   <Image
-                    src="/assets/shelf-maneki.webp"
+                    src={getAssetPath("/assets/shelf-maneki.webp")}
                     alt="Maneki-neko lucky cat, ceramic teapot, and chopsticks displayed at Hosshi Ramen"
                     fill
                     sizes="(max-width: 1024px) 80vw, 420px"
@@ -170,7 +171,7 @@ export function StorySection() {
               >
                 <div className="relative w-full h-full overflow-hidden rounded-[1px]">
                   <Image
-                    src="/assets/lantern-glow.webp"
+                    src={getAssetPath("/assets/lantern-glow.webp")}
                     alt="Warm red glowing Japanese chochin lantern inside Hosshi Ramen"
                     fill
                     sizes="(max-width: 1024px) 48vw, 260px"

@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import menuData from "@/data/menu.json";
 import { EnsoCircle, SumiBrushDivider } from "./JapaneseDecor";
+import { getAssetPath } from "@/config/site";
 
 interface VariantPrice {
   label: string;
@@ -195,7 +196,7 @@ export function MenuSection() {
         {hoveredDish && (
           <div className="relative w-full h-full overflow-hidden">
             <Image
-              src={hoveredDish.image}
+              src={getAssetPath(hoveredDish.image)}
               alt=""
               fill
               sizes="240px"

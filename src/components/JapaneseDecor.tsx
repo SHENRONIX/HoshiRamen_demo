@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getAssetPath } from "@/config/site";
 
 export function EnsoCircle({
   className = "",
@@ -88,7 +89,7 @@ export function HankoSeal({
     >
       {showCat ? (
         <Image
-          src="/assets/cat-seal.webp"
+          src={getAssetPath("/assets/cat-seal.webp")}
           alt="Hosshi Ramen lucky cat seal"
           width={size}
           height={size}

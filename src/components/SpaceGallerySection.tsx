@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { SakuraPetals, SumiBrushDivider } from "./JapaneseDecor";
+import { getAssetPath } from "@/config/site";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -144,7 +145,7 @@ export function SpaceGallerySection() {
               >
                 <div className="relative w-full h-full overflow-hidden rounded-[1px]">
                   <Image
-                    src={photo.src}
+                    src={getAssetPath(photo.src)}
                     alt={photo.alt}
                     fill
                     loading="lazy"
@@ -198,7 +199,7 @@ export function SpaceGallerySection() {
             <div className="relative w-full aspect-[4/3] max-h-[74vh] border border-[#C9A24B]/60 bg-[#0D0B0A] p-1.5 rounded-[2px]">
               <div className="relative w-full h-full">
                 <Image
-                  src={galleryPhotos[lightboxIdx].src}
+                  src={getAssetPath(galleryPhotos[lightboxIdx].src)}
                   alt={galleryPhotos[lightboxIdx].alt}
                   fill
                   sizes="90vw"

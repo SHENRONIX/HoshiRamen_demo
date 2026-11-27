@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
+import { getAssetPath } from "@/config/site";
 
 export function NorenLoader() {
   const [done, setDone] = useState(false);
@@ -117,7 +118,7 @@ export function NorenLoader() {
           </svg>
           <div className="noren-seal-cat relative w-20 h-20 opacity-0">
             <Image
-              src="/assets/cat-seal.webp"
+              src={getAssetPath("/assets/cat-seal.webp")}
               alt=""
               fill
               priority

@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { EnsoCircle, LanternAccents, SakuraPetals } from "./JapaneseDecor";
 import { MagneticButton } from "./MagneticButton";
+import { getAssetPath } from "@/config/site";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -98,7 +99,7 @@ export function HeroSection() {
         className="absolute inset-0 will-change-transform"
       >
         <Image
-          src="/assets/interior-counter.webp"
+          src={getAssetPath("/assets/interior-counter.webp")}
           alt="Hosshi Ramen wooden counter dining room illuminated by glowing red lanterns in Kalyani"
           fill
           priority

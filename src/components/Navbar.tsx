@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import { siteConfig } from "@/config/site";
+import { getAssetPath, siteConfig } from "@/config/site";
 import { MagneticButton } from "./MagneticButton";
 
 const navLinks = [
@@ -73,7 +73,7 @@ export function Navbar() {
           >
             <div className="relative w-9 h-9 rounded-full border border-[#C8161D]/75 p-0.5 bg-[#0D0B0A] transition-transform duration-300 group-hover:scale-105">
               <Image
-                src="/assets/cat-seal.webp"
+                src={getAssetPath("/assets/cat-seal.webp")}
                 alt="Hosshi Ramen cat seal"
                 width={36}
                 height={36}
